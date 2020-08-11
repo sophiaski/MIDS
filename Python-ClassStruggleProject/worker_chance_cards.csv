@@ -1,0 +1,30 @@
+prompt,asset,debit,position,turn,action
+"Your boss died, but the new one acts in much the same way. You begin to understand that the problem is not a mean boss but the class of bosses 1 asset.",1,0,0,0,asset
+Socialist ideas are spreading in the army - worth 3 assets.,3,0,0,0,asset
+"Workers finally understand that, with America’s wealth and democratic traditions, socialism here will be different than what exists in Russia and China - or “the Russian bogey-man no longer scare us”. A biggie - worth 3 assets.",3,0,0,0,asset
+"Candidate carter promised to reduce the Defense budget by $5-7 billion, but President Carter has just increased it by $4 billion, while cutting corners on aid to cities, the poor, the old and the unemployed. The workers’ anger at such deception is worth 1 assets.",1,0,0,0,asset
+You know your interest and the interests of the other classes in the class struggle. Such ‘class consciousness’ is worth many more  assets. Take 5 more.,5,0,0,0,asset
+"Tax Refund: with taxes deducted from each week’s paycheck, workers are the only people who can’t cheat on their taxes. The Government makes up for this exception by cheating the Workers, taxing them too much and giving them too little, even when it comes to tax refunds. Gain 1 asset.",1,0,0,0,"asset"
+A few Capitalists have recognized the injustice of our present economic system and have decided to support the Workers’ Movement. Individual exceptions in the class struggle are possible. Worth 1 asset.,1,0,0,0,"asset"
+"A GENERAL STRIKE",0,0,0,0,confrontation
+"ELECTION",0,0,0,0,confrontation
+"yesterday you shook hands with Republicrat Senator Kennewater, and you believed him when he said he is the working man’s candidate Contract 2 debits for being so gullible.",0,2,0,0,debit
+"If religion is the opium of the older workers, than opium (pot) is the religion of the younger set. While you’re looking at the lights inside your head - “Groovy, man, real groovy” - the Capitalists slips you two of his debits.",0,2,0,0,debit
+Serious illness of mother in law bankrupts the whole family and drives you to drink - 2 debits. Drinking is no answer to poverty.,0,2,0,0,debit
+"If you haven’t washed the dishes or made supper in the last week, move 2 spaces back. (Divisions between the people serve the Capitalist Class).",0,0,-2,0,position
+You get caught stealing food from the supermarket. You get 30 days in jail and are ordered to move back 1 space. Stealing is no answer to the problem of poverty.,0,0,-1,0,position
+Students are beginning to recognise that when they finish school most of them will become workers. Move 1 space.,0,0,1,0,position
+"You join a protest against the Government for paying businessmen-farmers $3 billion each year not to grow food. Din’t they know a lot of people are hungry, or don’t they care? Collective action moves you forward 2 spaces this time.",0,0,2,0,position
+Teachers and engineers are beginning to recognise that they have bosses just like other workers. Move 1 space.,0,0,1,0,position
+"You have just been laid off from work.If you blame the Capitalists, move two spaces ahead.",0,0,2,0,position
+The class struggle is progressing faster than you think. Move 1 space.,0,0,1,0,position
+Your class has lost confidence in you leadership and want to keep a closer eye on what you do. Go back 5 spaces.,0,0,-5,0,position
+Tired of breathing polluted air and drinking polluted water? Then it’s time to make pollution less profitable to the factory owners who are responsible for it. Move 5 spaces closer to the revolution. Let ‘em hear you!,0,0,5,0,"position"
+Union card - You’ve joined the union. The Union makes us strong. take 2 extra turns with the dice.,0,0,0,2,turn
+There is less chance in having lots of chances than you think. Your hard work in the struggle has earned you 2 extra turns.,0,0,0,2,turn
+"Together with your fellow workers, you have occupied your factory and locked your boss in the toilet. Workers get an extra turn at the dice.",0,0,0,1,turn
+"If all wealth is produced by the Workers, then what right do Capitalists have to any part of it, let alone the largest part? This “dangerous” question sends shivers up the spines of Capitalists everywhere. Grab 2 extra turns of the dice while the capitalists are still shivering.",0,0,0,2,turn
+"Because you have been brainwashed to respect everyone in authority, you continue to respect your boss no matter what he’s done. While learning to respect only those who deserve your respect, you miss a turn at the dice.",0,0,0,-1,turn
+You are caught feeling sorry for the Capitalists. Victory in class struggle comes to people who think about their own class. Miss 1 turn at the dice.,0,0,0,-1,turn
+A fire destroys your home - you lose everything - but your capitalist landlord collects insurance money. You miss a turn at the dice while looking for another apartment.,0,0,0,-1,turn
+It’s not clever to take so many chances. Skip your next turn.,0,0,0,-1,turn

@@ -1,0 +1,28 @@
+prompt,asset,debit,position,turn,action
+"Most Government welfare goes to Big Business (tax write off, price supports, incentive payments, guaranteed loans, etc.) While making a big fuss over the little welfare that goes to the poor, who really need it, help yourself to more welfare in the form of 2 assets.",2,0,0,0,asset
+"Sexually repressed people generally make good, docile workers, so you develop a sex education program which makes young people disgusted by their natural functions. 2 assets.",2,0,0,0,asset
+"In an effort to balance the budget, your school distric has abolished free milk for rich and por studens aslike. When all are equal before the law, you get richer 2 assets this time.",2,0,0,0,asset
+"Tax Refund: many big corporations don’t pay any taxes so there is nothing to refund them, but your tax accountants are less talented and more honest so you have paid something and you now get something back. take 4 assets.",4,0,0,0,asset
+"Skill at red baiting, getting workers to fight among themselves by calling some of them communists: increase by 1 asset.",1,0,0,0,asset
+Bribe money to pay union officials. Gain 3 assets from blocking the establishment of trade unions.,3,0,0,0,asset
+"A GENERAL STRIKE",0,0,0,0,confrontation
+"ELECTION",0,0,0,0,confrontation
+"You get caught with your hands in the public's pocket - They’re in deeper than usual. In an attempt to whitewash your reputation, you set up a charitable foundation (tax exempt and named after your family), but as a result, you contract 2 debits.",0,2,0,0,debit
+Northtop Airplane Company gets caught trying to bribe two Saudi Arabian generals and loses billion dollar contract 2 debits.,0,2,0,0,debit
+Paperback edition of Marx/Engels collected writings (100 volumes) sweeps the country. Your days are numbered. 2 debits.,0,2,0,0,debit
+The CIA mistakenly assassinate the leader of a friendly country. Capitalists deny everything and move 2 spaces back.,0,0,-2,0,"position"
+"Coal mine disasters caused by absence of safety equipment that you refused to put in because, you said, it was too expensive. Send roses to the funeral, and move back 3 spaces until the public outcry blows over.",0,0,-3,0,"position"
+"If you haven’t washed the dishes or made supper this week, move 2 spaces ahead. (Divisions between the people serve the Capitalist class.)",0,0,2,0,"position"
+Farmers are fooled into blaming consumers (instead of the profits of Capitalist middlemen) for the low prices they get for their crops. Move 1 space.,0,0,1,0,"position"
+Mall Businessmen are so frightened by the possibility of going broke and becoming workers that they generally do what the Capitalists say. Move 1 space.,0,0,1,0,"position"
+"You purposely produce cars to wear out sooner than is technologically necessary in order to keep up the demand for new ones. For such good Capitalists thinking, move ahead 1 space.",0,0,1,0,"position"
+"Capitalists fool workers into equating anarchism with criminality, with the result that anarchists Sacco and Vanzetti can be executed for a crime they didn’t commit. Capitalists move ahead 3 spaces.",0,0,3,0,"position"
+"Capitalists fool workers into equating communism with spying, with the result that communists Ethel and Julius Rosenberg can be executed for a crime they didn’t commit. capitalists move ahead 3 spaces.",0,0,3,0,"position"
+You embezzle one million dollars from your stockholders. No one sees or cares. Moves 1 space ahead.,0,0,1,0,"position"
+"All your propaganda says a person is free when Government lets him alone. But almost everything one wants to do or have costs money, so only Capitalists are really free. You can use your freedom to move 2 spaces ahead.",0,0,2,0,"position"
+Your daughter has just eloped with the garbage collector. Skip a turn while you’re thinking of something to tell the neighbours.,0,0,0,-1,turn
+Your son has become a follower of Reverend Moon and your daughter is hooked on heroin. So what good is all your money? Worrying about it all causes you to forget your next turn at the dice.,0,0,0,-1,turn
+Rockefeller gets photographed giving people the finger. It’s not wise letting people see what Capitalists really think of them. Miss a turn at the dice while you think of new ways to fool the people.,0,0,0,-1,turn
+You are caught feeling sorry for the workers. Victory in class struggle comes to people who think about their own class. Miss 1 turn at the dice.,0,0,0,-1,turn
+It’s not clever to take so many chances. Skip your next turn at the dice.,0,0,0,-1,turn
+There is less chance in having lots of chances than you think. Your hard work in the struggle has earned you 1 more turn.,0,0,0,1,turn
