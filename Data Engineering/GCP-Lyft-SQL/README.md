@@ -8,11 +8,9 @@
 
 #### Problem Statement
 
-- You're a data scientist at Lyft Bay Wheels (https://www.lyft.com/bikes/bay-wheels), formerly known as Ford GoBike, the
-  company running Bay Area Bikeshare.  are trying to increase ridership, and
-  you want to offer deals through the mobile app to do so. 
-  
-- Currently, your company has several options which can change over time. Frequent offers include: 
+- [Lyft Bay Wheels](https://www.lyft.com/bikes/bay-wheels), formerly known as Ford GoBike, is trying to increase ridership, and
+  we want to offer deals through the mobile app to do so. 
+- Currently, the company has several options which can change over time. Frequent offers include: 
   * Single Ride 
   * Monthly Membership
   * Annual Membership
@@ -20,17 +18,15 @@
   * Access Pass
   * Corporate Membership
   * etc.
-
-- This project answers the following questions: 
+- This project folder answers the following questions: 
   * What are the 5 most popular trips that you would call "commuter trips"?  
-  * What are your recommendations for offers (justify based on your findings)?
-
+  * What are some recommendations for new offers?
 
 ## Parts 1, 2, 3
 
-- In Part 1, queries using the Google BigQuery GUI interface in the cloud.
-- In Part 2, queries using the Linux command line from our virtual machine in the cloud.
-- In Part 3, queries from a Jupyter Notebook in our virtual machine in the cloud, save the results into Pandas, and present a report enhanced by Pandas output tables and simple data visualizations using Seaborn / Matplotlib.
+- Part 1 contains queries using the Google BigQuery GUI interface in the cloud.
+- Part 2 contains queries using the Linux command line from our virtual machine in the cloud.
+- Part 3 contains queries from a Jupyter Notebook in a virtual machine in the cloud, saved results and reporting with Pandas, and simple data visualizations using Seaborn / Matplotlib.
 
 ---
 
@@ -414,10 +410,6 @@ GROUP BY
 
 ---
 
-## Part 3 - Synthesize query project results
+## Part 3 - Synthesize query project results in `Project_1.ipynb`
 
-#### Report in the form of the Jupter Notebook named `Project_1.ipynb`
 
-  * What are the 5 most popular trips that you would call "commuter trips"? 
-  
-  * What are your recommendations for offers (justify based on your findings)?
