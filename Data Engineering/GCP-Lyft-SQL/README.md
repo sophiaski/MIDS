@@ -12,7 +12,7 @@
   company running Bay Area Bikeshare.  are trying to increase ridership, and
   you want to offer deals through the mobile app to do so. 
   
-- What deals do you offer though? Currently, your company has several options which can change over time. Frequent offers include: 
+- Currently, your company has several options which can change over time. Frequent offers include: 
   * Single Ride 
   * Monthly Membership
   * Annual Membership
@@ -189,7 +189,6 @@ LIMIT 30 # Top 10 for 3 Regions = 30
 ### Queries
 
 -  What's the size of this dataset? (i.e., how many trips)
-  - SQL query:
 ```sql
 bq query --use_legacy_sql=false '
     SELECT 
@@ -197,14 +196,11 @@ bq query --use_legacy_sql=false '
     FROM
        `bigquery-public-data.san_francisco.bikeshare_trips`'
 ```
-  - Answer:
-  
 | NumTrips |
 | -------- |
 |   983648 |
 
 - What is the earliest start time and latest end time for a trip?
-  * SQL query:
 ```sql
 bq query --use_legacy_sql=false '
     SELECT
@@ -212,15 +208,12 @@ bq query --use_legacy_sql=false '
       MAX(end_date) AS MaxStartDate
     FROM
       `bigquery-public-data.san_francisco.bikeshare_trips`'
-```
-  * Answer:
-  
+```  
 |    MinStartDate     |    MaxStartDate     |
 | ------------------- | ------------------- |
 | 2013-08-29 09:08:00 | 2016-08-31 23:48:00 |
 
 - How many bikes are there?
-  * SQL query:
 ```sql
 bq query --use_legacy_sql=false '
     SELECT
@@ -228,13 +221,11 @@ bq query --use_legacy_sql=false '
     FROM
       `bigquery-public-data.san_francisco.bikeshare_trips`'
 ```
-  * Answer:
 | NumBikes |
 | -------- |
 |      700 |
 
 - How many trips are in the morning vs in the afternoon?
-  * SQL query:
 ```sql
 bq query --use_legacy_sql=false '
     SELECT
@@ -264,7 +255,6 @@ bq query --use_legacy_sql=false '
     GROUP BY 
       TimeOfDay'
 ```
-  * Answer:
 | NumTrips | TimeOfDay |
 | -------- | --------- |
 |   388538 | afternoon |
@@ -273,22 +263,16 @@ bq query --use_legacy_sql=false '
 There are 392,520 morning trips, with the majority of the duration of their trip between 6AM and 12PM, and there are 388,538 afternoon trips, with the majority of the duration of their trip between 12PM and 6PM. 
 
 ### Project Questions
-Identify the main questions you'll need to answer to make recommendations (list below, add as many questions as you need).
 
-- Question 1: How many one-way trips are there?
-
-- Question 2: For each subscriber type, during what starting hours do you see peak usage of one-way trips? 
-
-- Question 3: For subscribers, is there a similar peak of one-way trips over the weekend?
-
-- Question 4: What is the average duration of one-way trips that take place around 7-10AM and 4-7PM during the week? 
-
-- Question 5: What are the 5 most popular trips that you would call "commuter trips"?
-
-- Question 6: How many customers are ending their trips during popular commuter starting stations?
+Main questions needed to make recommendations:
+1. How many one-way trips are there?
+2. For each subscriber type, during what starting hours do you see peak usage of one-way trips? 
+3. For subscribers, is there a similar peak of one-way trips over the weekend?
+4. What is the average duration of one-way trips that take place around 7-10AM and 4-7PM during the week? 
+5. What are the 5 most popular trips that you would call "commuter trips"?
+6. How many customers are ending their trips during popular commuter starting stations?
 
 ### Answers
-Answer at least 4 of the questions you identified above You can use either BigQuery or the bq command line tool.  Paste your questions, queries and answers below.
 
 - Question 1: How many one-way trips are there?
   * Answer: By calculating how many trips started and ended at different stations, 951,601 one-way trips were counted in this dataset. 
@@ -423,7 +407,6 @@ WHERE
 GROUP BY
   SubscriberType'
 ```
-
 | AvgTripLength_Min | StdTripLength_Min | SubscriberType |
 | ----------------- | ----------------- | -------------- |
 | 9.05              | 10.67             | Subscriber     |
@@ -431,60 +414,10 @@ GROUP BY
 
 ---
 
-## Part 3 - Employ notebooks to synthesize query project results
+## Part 3 - Synthesize query project results
 
-### Get Going
-
-Create a Jupyter Notebook against a Python 3 kernel named Project_1.ipynb in the assignment branch of your repo.
-
-#### Run queries in the notebook 
-
-At the end of this document is an example Jupyter Notebook you can take a look at and run.  
-
-You can run queries using the "bang" command to shell out, such as this:
-
-```
-! bq query --use_legacy_sql=FALSE '<your-query-here>'
-```
-
-- NOTE: 
-- Queries that return over 16K rows will not run this way, 
-- Run groupbys etc in the bq web interface and save that as a table in BQ. 
-- Max rows is defaulted to 100, use the command line parameter `--max_rows=1000000` to make it larger
-- Query those tables the same way as in `example.ipynb`
-
-Or you can use the magic commands, such as this:
-
-```sql
-%%bigquery my_panda_data_frame
-
-select start_station_name, end_station_name
-from `bigquery-public-data.san_francisco.bikeshare_trips`
-where start_station_name <> end_station_name
-limit 10
-```
-
-```python
-my_panda_data_frame
-```
-
-#### Report in the form of the Jupter Notebook named Project_1.ipynb
-
-- Using markdown cells, MUST definitively state and answer the two project questions:
+#### Report in the form of the Jupter Notebook named `Project_1.ipynb`
 
   * What are the 5 most popular trips that you would call "commuter trips"? 
   
   * What are your recommendations for offers (justify based on your findings)?
-
-- For any temporary tables (or views) that you created, include the SQL in markdown cells
-
-- Use code cells for SQL you ran to load into Pandas, either using the !bq or the magic commands
-
-- Use code cells to create Pandas formatted output tables (at least 3) to present or support your findings
-
-- Use code cells to create simple data visualizations using Seaborn / Matplotlib (at least 2) to present or support your findings
-
-### Resource: see example .ipynb file 
-
-[Example Notebook](example.ipynb)
-
