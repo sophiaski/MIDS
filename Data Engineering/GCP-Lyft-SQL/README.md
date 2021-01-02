@@ -197,7 +197,6 @@ bq query --use_legacy_sql=false '
     FROM
        `bigquery-public-data.san_francisco.bikeshare_trips`'
 ```
-  * Answer:
 | NumTrips |
 | -------- |
 |   983648 |
@@ -213,6 +212,7 @@ bq query --use_legacy_sql=false '
       `bigquery-public-data.san_francisco.bikeshare_trips`'
 ```
   * Answer:
+  
 |    MinStartDate     |    MaxStartDate     |
 | ------------------- | ------------------- |
 | 2013-08-29 09:08:00 | 2016-08-31 23:48:00 |
