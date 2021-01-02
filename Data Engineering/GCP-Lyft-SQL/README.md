@@ -189,7 +189,7 @@ LIMIT 30 # Top 10 for 3 Regions = 30
 ### Queries
 
 -  What's the size of this dataset? (i.e., how many trips)
-  * SQL query:
+  - SQL query:
 ```sql
 bq query --use_legacy_sql=false '
     SELECT 
@@ -197,7 +197,7 @@ bq query --use_legacy_sql=false '
     FROM
        `bigquery-public-data.san_francisco.bikeshare_trips`'
 ```
-  * Answer:
+  - Answer:
   
 | NumTrips |
 | -------- |
