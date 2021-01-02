@@ -1,9 +1,5 @@
 # Understanding User Behavior
 
-## Sophia Skowronski | Project 3
-
-## Summer 2020 | MIDS w205 | Fundamentals of Data Engineering
-
 # Summary
 
 Our mobile game has two events we're interested in tracking: buying a sword and joining a guild. This report is a summary of how the data pipeline was set up so that our data anayltics team can use it to query and solve the business problems at hand.
