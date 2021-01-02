@@ -197,6 +197,8 @@ bq query --use_legacy_sql=false '
     FROM
        `bigquery-public-data.san_francisco.bikeshare_trips`'
 ```
+  * Answer:
+  
 | NumTrips |
 | -------- |
 |   983648 |
