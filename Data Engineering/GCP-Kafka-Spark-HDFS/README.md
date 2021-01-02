@@ -1,9 +1,5 @@
 # Tracking User Activity on EdTech Assessments
 
-## Sophia Skowronski | Project 2
-
-## Summer 2020 | MIDS w205 | Fundamentals of Data Engineering
-
 # Summary
 
 An EdTech firm created a tool that delivers data from assessments on online learning, and it has been prepared here for customers to run additional queries for publishing their results.
