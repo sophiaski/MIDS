@@ -1,17 +1,18 @@
 # Project 1: Query Project
 
-  Google Cloud Platform (GCP) and BiqQuery. You'll answer business-driven
-  questions using public datasets housed in GCP. To give you experience with
-  different ways to use those datasets, you will use the web UI (BiqQuery) and
-  the command-line tools, and work with them in Jupyter Notebooks.
+  Uses Google Cloud Platform (GCP) and BiqQuery to answer business-driven
+  questions using public datasets. This folder features code for web UI (BiqQuery) and
+  the command-line tools in Jupyter Notebooks.
+  
+  This shows work completed in a cloud environment using SQL against a big data data platform.
 
 #### Problem Statement
 
 - You're a data scientist at Lyft Bay Wheels (https://www.lyft.com/bikes/bay-wheels), formerly known as Ford GoBike, the
-  company running Bay Area Bikeshare. You are trying to increase ridership, and
+  company running Bay Area Bikeshare.  are trying to increase ridership, and
   you want to offer deals through the mobile app to do so. 
   
-- What deals do you offer though? Currently, your company has several options which can change over time.  Please visit the website to see the current offers and other marketing information. Frequent offers include: 
+- What deals do you offer though? Currently, your company has several options which can change over time. Frequent offers include: 
   * Single Ride 
   * Monthly Membership
   * Annual Membership
@@ -20,117 +21,36 @@
   * Corporate Membership
   * etc.
 
-- Through this project, you will answer these questions: 
-
+- This project answers the following questions: 
   * What are the 5 most popular trips that you would call "commuter trips"?  
   * What are your recommendations for offers (justify based on your findings)?
 
-- Please note that there are no exact answers to the above questions, just like in the proverbial real world.  This is not a simple exercise where each question above will have a simple SQL query. It is an exercise in analytics over inexact and dirty data. 
-
-- You won't find a column in a table labeled "commuter trip".  You will find you need to do quite a bit of data exploration using SQL queries to determine your own definition of a communter trip.  In data exploration process, you will find a lot of dirty data, that you will need to either clean or filter out. You will then write SQL queries to find the communter trips.
-
-- Likewise to make your recommendations, you will need to do data exploration, cleaning or filtering dirty data, etc. to come up with the final queries that will give you the supporting data for your recommendations. You can make any recommendations regarding the offers, including, but not limited to: 
-  * market offers differently to generate more revenue 
-  * remove offers that are not working 
-  * modify exising offers to generate more revenue
-  * create new offers for hidden business opportunities you have found
-  * etc. 
-
-#### All Work MUST be done in the Google Cloud Platform (GCP) / The Majority of Work MUST be done using BigQuery SQL / Usage of Temporary Tables, Views, Pandas, Data Visualizations
-
-A couple of the goals of w205 are for students to learn how to work in a cloud environment (such as GCP) and how to use SQL against a big data data platform (such as Google BigQuery).  In keeping with these goals, please do all of your work in GCP, and the majority of your analytics work using BigQuery SQL queries.
-
-You can make intermediate temporary tables or views in your own dataset in BigQuery as you like.  Actually, this is a great way to work!  These make data exploration much easier.  It's much easier when you have made temporary tables or views with only clean data, filtered rows, filtered columns, new columns, summary data, etc.  If you use intermediate temporary tables or views, you should include the SQL used to create these, along with a brief note mentioning that you used the temporary table or view.
-
-In the final Jupyter Notebook, the results of your BigQuery SQL will be read into Pandas, where you will use the skills you learned in the Python class to print formatted Pandas tables, simple data visualizations using Seaborn / Matplotlib, etc.  You can use Pandas for simple transformations, but please remember the bulk of work should be done using Google BigQuery SQL.
-
-#### GitHub Procedures
-
-In your Python class you used GitHub, with a single repo for all assignments, where you committed without doing a pull request.  In this class, we will try to mimic the real world more closely, so our procedures will be enhanced. 
-
-Each project, including this one, will have it's own repo.
-
-Important:  In w205, please never merge your assignment branch to the master branch. 
-
-Using the git command line: clone down the repo, leave the master branch untouched, create an assignment branch, and move to that branch:
-- Open a linux command line to your virtual machine and be sure you are logged in as jupyter.
-- Create a ~/w205 directory if it does not already exist `mkdir ~/w205`
-- Change directory into the ~/w205 directory `cd ~/w205`
-- Clone down your repo `git clone <https url for your repo>`
-- Change directory into the repo `cd <repo name>`
-- Create an assignment branch `git branch assignment`
-- Checkout the assignment branch `git checkout assignment`
-
-The previous steps only need to be done once.  Once you your clone is on the assignment branch it will remain on that branch unless you checkout another branch.
-
-The project workflow follows this pattern, which may be repeated as many times as needed.  In fact it's best to do this frequently as it saves your work into GitHub in case your virtual machine becomes corrupt:
-- Make changes to existing files as needed.
-- Add new files as needed
-- Stage modified files `git add <filename>`
-- Commit staged files `git commit -m "<meaningful comment about your changes>"`
-- Push the commit on your assignment branch from your clone to GitHub `git push origin assignment`
-
-Once you are done, go to the GitHub web interface and create a pull request comparing the assignment branch to the master branch.  Add your instructor, and only your instructor, as the reviewer.  The date and time stamp of the pull request is considered the submission time for late penalties. 
-
-If you decide to make more changes after you have created a pull request, you can simply close the pull request (without merge!), make more changes, stage, commit, push, and create a final pull request when you are done.  Note that the last data and time stamp of the last pull request will be considered the submission time for late penalties.
-
----
 
 ## Parts 1, 2, 3
 
-We have broken down this project into 3 parts, about 1 week's work each to help you stay on track.
-
-**You will only turn in the project once  at the end of part 3!**
-
-- In Part 1, we will query using the Google BigQuery GUI interface in the cloud.
-
-- In Part 2, we will query using the Linux command line from our virtual machine in the cloud.
-
-- In Part 3, we will query from a Jupyter Notebook in our virtual machine in the cloud, save the results into Pandas, and present a report enhanced by Pandas output tables and simple data visualizations using Seaborn / Matplotlib.
+- In Part 1, queries using the Google BigQuery GUI interface in the cloud.
+- In Part 2, queries using the Linux command line from our virtual machine in the cloud.
+- In Part 3, queries from a Jupyter Notebook in our virtual machine in the cloud, save the results into Pandas, and present a report enhanced by Pandas output tables and simple data visualizations using Seaborn / Matplotlib.
 
 ---
 
 ## Part 1 - Querying Data with BigQuery
 
-### SQL Tutorial
-
-Please go through this SQL tutorial to help you learn the basics of SQL to help you complete this project.
-
-SQL tutorial: https://www.w3schools.com/sql/default.asp
-
-### Google Cloud Helpful Links
-
-Read: https://cloud.google.com/docs/overview/
-
-BigQuery: https://cloud.google.com/bigquery/
-
-Public Datasets: Bring up your Google BigQuery console, open the menu for the public datasets, and navigate to the the dataset san_francisco.
-
-- The Bay Bike Share has two datasets: a static one and a dynamic one.  The static one covers an historic period of about 3 years.  The dynamic one updates every 10 minutes or so.  THE STATIC ONE IS THE ONE WE WILL USE IN CLASS AND IN THE PROJECT. The reason is that is much easier to learn SQL against a static target instead of a moving target.
-
-- (USE THESE TABLES!) The static tables we will be using in this class are in the dataset **san_francisco** :
-
-  * bikeshare_stations
-
-  * bikeshare_status
-
-  * bikeshare_trips
-
-- The dynamic tables are found in the dataset **san_francisco_bikeshare**
-
 ### Some initial queries
 
-Paste your SQL query and answer the question in a sentence.  Be sure you properly format your queries and results using markdown. 
-
 - What's the size of this dataset? (i.e., how many trips)
+  * Answer: There are 983,648 rows of data in `bikeshare_trips`, which corresponds to the total number of trips. 
+  * SQL query:
 ```sql
 SELECT
   COUNT(*) AS NumTrips
 FROM
   `bigquery-public-data.san_francisco.bikeshare_trips`
 ```
-There are 983,648 rows of data in `bikeshare_trips`, which corresponds to the total number of trips. 
+
 - What is the earliest start date and time and latest end date and time for a trip?
+  * Answer: The first bike trip started on August 29, 2013 at 09:08:00 UTC, and the last recorded trip ended on August 31, 2016 at 23:48:00 UTC. 
+  * SQL query:
 ```sql
 SELECT
   MIN(start_date) AS MinStartDate,
@@ -138,20 +58,18 @@ SELECT
 FROM
   `bigquery-public-data.san_francisco.bikeshare_trips`
 ```
-The first bike trip started on August 29, 2013 at 09:08:00 UTC, and the last recorded trip ended on August 31, 2016 at 23:48:00 UTC. 
+
 - How many bikes are there?
+  * Answer: Counting unique bike IDs, there are 700 bikes in use between all of the bike stations.
+  * SQL query:
 ```sql
 SELECT
   COUNT(DISTINCT bike_number) AS NumBikes
 FROM
   `bigquery-public-data.san_francisco.bikeshare_trips`
 ```
-Counting unique bike IDs, there are 700 bikes in use between all of the bike stations.
 
-### Questions of your own
-- Make up 3 questions and answer them using the Bay Area Bike Share Trips Data.  These questions MUST be different than any of the questions and queries you ran above.
-
-- Question 1: Which are the two most popular hours for bike trips across all customer types?
+- Which are the two most popular hours for bike trips across all customer types?
   * Answer: Across all of the customer types, the highest number of trips were started within the 8th and 17th hour.
   * SQL query:
 ```sql
@@ -167,7 +85,7 @@ ORDER BY
 LIMIT
   2
 ```
-- Question 2: What cities have the most and least number of stations?
+- What cities have the most and least number of stations?
   * Answer: Grouping by distinct landmarks, the data shows that San Francisco has the maximum number of stations (37), while Palo Alto contains the least (5) number of stations. 
   * SQL query:
 ```sql
@@ -181,7 +99,7 @@ GROUP BY
 ORDER BY
   num_stations DESC
 ```
-- Question 3: At what hour of the day did the longest trip start?
+- At what hour of the day did the longest trip start?
   * Answer: The longest trip recorded was 4797.3 hours, and it started within the 22nd hour.
   * SQL query:
 ```sql
@@ -195,20 +113,9 @@ GROUP BY
 ORDER BY
   hour
 ```
+### Bonus queries
 
-### Bonus activity queries (optional - not graded - just this section is optional, all other sections are required)
-
-The bike share dynamic dataset offers multiple tables that can be joined to learn more interesting facts about the bike share business across all regions. These advanced queries are designed to challenge you to explore the other tables, using only the available metadata to create views that give you a broader understanding of the overall volumes across the regions(each region has multiple stations)
-
-We can create a temporary table or view against the dynamic dataset to join to our static dataset.
-
-Here is some SQL to pull the region_id and station_id from the dynamic dataset.  You can save the results of this query to a temporary table or view.  You can then join the static tables to this table or view to find the region:
-```sql
-#standardSQL
-select distinct region_id, station_id
-from `bigquery-public-data.san_francisco_bikeshare.bikeshare_station_info`
-```
-- Top 5 popular station pairs in each region
+- Top 5 popular station pairs in each region?
 ```sql
 SELECT
 t1.region_id AS REGION,
@@ -225,7 +132,7 @@ GROUP BY REGION, TRIP_PAIR
 ORDER BY PAIR_RANK_FOR_REGION, REGION
 LIMIT 25 # Top 5 Pairs for 5 Regions = 25
 ```
-- Top 3 most popular regions(stations belong within 1 region)
+- Top 3 most popular regions(stations belong within 1 region)?
 ```sql
 SELECT
 t1.region_id AS STARTING_REGION, # Defining the region by the starting station
@@ -241,7 +148,7 @@ GROUP BY STARTING_REGION
 ORDER BY NUM_TRIPS DESC
 LIMIT 3
 ```
-- Total trips for each short station name in each region
+- Total trips for each short station name in each region?
 ```sql
 SELECT
 t1.region_id AS STARTING_REGION, # Defining the region and station by the starting station
@@ -258,7 +165,7 @@ GROUP BY STARTING_STATION, STARTING_REGION
 ORDER BY STARTING_REGION ASC, NUM_TRIPS DESC
 ```
 
-- What are the top 10 used bikes in each of the top 3 region. these bikes could be in need of more frequent maintenance.
+- What are the top 10 used bikes in each of the top 3 region? These bikes could be in need of more frequent maintenance?
 ```sql
 SELECT
 t1.region_id AS REGION,
@@ -279,24 +186,10 @@ LIMIT 30 # Top 10 for 3 Regions = 30
 
 ## Part 2 - Querying data from the BigQuery CLI 
 
-- Use BQ from the Linux command line:
-
-  * General query structure
-
-    ```
-    bq query --use_legacy_sql=false '
-        SELECT count(*)
-        FROM
-           `bigquery-public-data.san_francisco.bikeshare_trips`'
-    ```
-
 ### Queries
 
-1. Rerun the first 3 queries from Part 1 using bq command line tool (Paste your bq
-   queries and results here, using properly formatted markdown):
-
-  * What's the size of this dataset? (i.e., how many trips)
-
+-  What's the size of this dataset? (i.e., how many trips)
+  * SQL query:
 ```sql
 bq query --use_legacy_sql=false '
     SELECT 
@@ -304,11 +197,13 @@ bq query --use_legacy_sql=false '
     FROM
        `bigquery-public-data.san_francisco.bikeshare_trips`'
 ```
+  * Answer:
 | NumTrips |
 | -------- |
 |   983648 |
 
-  * What is the earliest start time and latest end time for a trip?
+- What is the earliest start time and latest end time for a trip?
+  * SQL query:
 ```sql
 bq query --use_legacy_sql=false '
     SELECT
@@ -317,11 +212,13 @@ bq query --use_legacy_sql=false '
     FROM
       `bigquery-public-data.san_francisco.bikeshare_trips`'
 ```
+  * Answer:
 |    MinStartDate     |    MaxStartDate     |
 | ------------------- | ------------------- |
 | 2013-08-29 09:08:00 | 2016-08-31 23:48:00 |
 
-  * How many bikes are there?
+- How many bikes are there?
+  * SQL query:
 ```sql
 bq query --use_legacy_sql=false '
     SELECT
@@ -329,14 +226,13 @@ bq query --use_legacy_sql=false '
     FROM
       `bigquery-public-data.san_francisco.bikeshare_trips`'
 ```
+  * Answer:
 | NumBikes |
 | -------- |
 |      700 |
 
-2. New Query (Run using bq and pste your SQL query and answer the question in a sentence, using properly formatted markdown):
-
-  * How many trips are in the morning vs in the afternoon?
-
+- How many trips are in the morning vs in the afternoon?
+  * SQL query:
 ```sql
 bq query --use_legacy_sql=false '
     SELECT
@@ -366,6 +262,7 @@ bq query --use_legacy_sql=false '
     GROUP BY 
       TimeOfDay'
 ```
+  * Answer:
 | NumTrips | TimeOfDay |
 | -------- | --------- |
 |   388538 | afternoon |
